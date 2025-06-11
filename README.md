@@ -82,7 +82,7 @@ npm run dev
 ```json
 {
   "userId": "abc123",
-  "deviceId": "esp32cam-01",
+  "deviceId": "NpuCam-01",
   "timestamp": "2025-06-10T15:30:00Z",
   "blink_frecuency": 12,
   "blink_duration_ms": 140.5,
