@@ -1,6 +1,6 @@
 # 👁️ Sistema de Monitoreo Visual IoT para Prevención del Síndrome Visual Informático (SVI)
 
-Este proyecto desarrolla una solución de software y hardware integrada para el monitoreo continuo de comportamiento visual y condiciones ambientales, orientada a la prevención del **Síndrome Visual Informático (SVI)** en adolescentes. Utiliza sensores IoT y un microservicio en Java para capturar, almacenar y analizar datos visuales con enfoque en salud digital.
+Este proyecto desarrolla una solución de software y hardware integrada para el monitoreo continuo de comportamiento visual y condiciones ambientales, orientada a la prevención del **Síndrome Visual Informático (SVI)** en adolescentes. Utiliza dispositivos IoT y cámaras integradas, un microservicio en Java para capturar, almacenar y analizar datos visuales con enfoque en salud digital.
 
 ---
 
@@ -59,15 +59,9 @@ Este proyecto desarrolla una solución de software y hardware integrada para el 
 ./gradlew bootRun
 ```
 
-> Asegúrate de configurar el archivo `application.yml` o `application.properties` con la conexión a la base de datos.
+> Asegúrate de configurar el archivo `application.yml` con la conexión a la base de datos.
 
-### 2. Dispositivo ESP32-CAM
-
-* Usa el código del archivo `main.ino` en la carpeta `/iot/esp32-cam`.
-* Sube vía FTDI y conecta al Wi-Fi configurado.
-* Envía imágenes o datos vía HTTP POST al endpoint `/visual/upload`.
-
-### 3. Frontend React (opcional)
+### 2. Frontend React (opcional)
 
 ```bash
 cd frontend/notificaciones-visuales
@@ -79,10 +73,8 @@ npm run dev
 
 ## 🛠️ Endpoints principales
 
-* `POST /visual/upload` → Recibe datos visuales en JSON.
-* `GET /visual/{userId}` → Devuelve registros visuales por usuario.
-* `GET /notificaciones/{userId}` → Devuelve alertas generadas.
-
+* `POST /capture` → Recibe datos visuales en JSON.
+* `GET /patient/{userId}` → Devuelve registros visuales por usuario.
 ---
 
 ## 💪 Ejemplo de payload recibido
