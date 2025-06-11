@@ -1,0 +1,20 @@
+server:
+  port: 9091
+  servlet:
+    context-path: /visualbehaviormonitor/v1
+
+spring:
+  application:
+    name: MS-VisualBehaviorMonitor
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=sqldbvbm01;trustServerCertificate=true;
+    username: admUser01
+    password: vbm001
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
